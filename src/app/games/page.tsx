@@ -1,5 +1,4 @@
 'use client'
-import Dashboard from '@/components/Dashboard/Dashboard'
 import NavBar from '@/components/NavBar/NavBar'
 import Sidebar from '@/components/Sidebar/Sidebar'
 import React, { useState } from 'react'

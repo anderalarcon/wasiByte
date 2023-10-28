@@ -13,6 +13,7 @@ const Courses = () => {
           imageSrc={course.imageSrc}
           title={course.title}
           desc={course.description}
+          id={course.id}
         />
       )
     })
