@@ -3,7 +3,7 @@ import React from 'react'
 
 const TopBar = () => {
     return (
-        <nav className='py-5 px-10 border-b-2 border-gray-200'>
+        <nav className='py-3 md:px-5 md:py-5 md:px-8 border-b-2 border-gray-200'>
             <div className='flex justify-between items-center'>
                 <div className="text-lg font-semibold">
                     <h1>Bienvenido! ☀️</h1>
