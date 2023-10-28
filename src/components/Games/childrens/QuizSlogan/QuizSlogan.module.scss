@@ -1,0 +1,29 @@
+.quizSlogan {
+    background-color: var(--primary-500);
+    color: var(--white);
+    border-radius: 20px;
+    padding: 0 20px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    align-items: center;
+    &_top {
+        &_title {
+            font-weight: 700;
+            font-size: 28px;
+            color: var(--secondary-500);
+        }
+        &_desc {
+            font-weight: 500;
+            font-size: 16px;
+        }
+    }
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        // justify-content: space-between;
+    }
+
+    @media screen and (min-width: 992px) {}
+}
