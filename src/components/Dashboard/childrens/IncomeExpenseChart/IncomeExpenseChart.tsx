@@ -11,7 +11,7 @@ import {
     ChartData,
 } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
-
+import styles from './IncomesExpenseChart.module.scss'
 ChartJS.register(
     CategoryScale,
     LinearScale,
@@ -88,7 +88,7 @@ export const data: ChartData<"bar", number[], string> = {
 
 const IncomeExpenseChart = () => {
     return (
-        <div>
+        <div className={styles.incomesexpensechart}>
             <Bar
                 //@ts-ignore
                 options={options}

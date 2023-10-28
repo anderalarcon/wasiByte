@@ -1,0 +1,16 @@
+.incomesexpenses {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    &_title {
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+    }
+
+    &_cards {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}

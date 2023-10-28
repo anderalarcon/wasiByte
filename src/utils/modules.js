@@ -12,11 +12,6 @@ export const modules = [
       iconSrc: dashboardIcon
     },
     {
-      name: 'Cursos',
-      link: '/cursos',
-      iconSrc: coursesIcon
-    },
-    {
       name: 'Mis Productos',
       link: '/productos',
       iconSrc: productsIcon
@@ -32,15 +27,15 @@ export const modules = [
       iconSrc: recommendsIcon
     },
     {
-      name: 'Beneficios para ti',
-      link: '/beneficios',
+      name: 'Jugando con el cuy',
+      link: '/games',
       iconSrc: dashboardIcon
     },
-    {
-      name: 'Calculadora',
-      link: '/calculadora',
-      iconSrc: dashboardIcon
-    },
+    // {
+    //   name: 'Calculadora',
+    //   link: '/calculadora',
+    //   iconSrc: dashboardIcon
+    // },
     {
       name: 'Cerrar Sesión',
       link: '/cerrar-sesion',

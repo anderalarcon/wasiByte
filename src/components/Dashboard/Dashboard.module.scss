@@ -2,9 +2,12 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    gap: 30px;
     &_top, &_bot {
         display: flex;
         flex-direction: column;
+        padding: 0 16px;
+        gap: 20px;
     }
 
     &_top {

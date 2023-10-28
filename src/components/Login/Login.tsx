@@ -7,7 +7,8 @@ import leftArrow from '../../../public/images/leftArrow.png'
 import question from '../../../public/images/question.png'
 import clock from '../../../public/icons/clockIcon.svg'
 import useCountdown from '@/hooks/useCountdown'
-import LoginForm from '../LoginForm/LoginForm'
+import LoginForm from './childrens/LoginForm/LoginForm'
+
 
 const Login = () => {
   const timeLeft = useCountdown(120)
