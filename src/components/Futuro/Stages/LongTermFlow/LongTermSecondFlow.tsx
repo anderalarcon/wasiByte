@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button'
 import Image from 'next/image'
 import { Checkbox } from '@/components/ui/checkbox'
 import styles from './LongTermSecondFlow.module.scss'
+import Link from 'next/link'
 const LongTermSecondFlow = () => {
     return (
         <div className={`p-5 bg-[#EBF4FF] h-full rounded-xl w-full flex flex-col space-y-2 ${styles.secondflow}`}>
@@ -46,8 +47,9 @@ const LongTermSecondFlow = () => {
                 </p>
                 <Button
                     className='bg-[#FF7800] w-full rounded-2xl md:w-4/6'
+                    asChild
                 >
-                    Solicitar
+                    <Link href='https://www.viabcp.com/' target='_blank'>Solicitar</Link>
                 </Button>
             </div>
         </div>

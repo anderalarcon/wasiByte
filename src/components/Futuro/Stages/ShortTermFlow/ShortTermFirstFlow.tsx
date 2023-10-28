@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Input } from '@/components/ui/input'
 import { cn } from '@/lib/utils'
 import { BellRing, Check, CheckCircle2 } from 'lucide-react'
+import Link from 'next/link'
 import React from 'react'
 
 const features = [
@@ -69,8 +70,8 @@ export function CardFeatures({ className, ...props }: CardProps) {
                 </div>
             </CardContent>
             <CardFooter>
-                <Button className="bg-[#0030B3] w-full rounded-2xl">
-                    Descubre cómo conseguir el auto
+                <Button asChild className="bg-[#0030B3] w-full rounded-2xl">
+                    <Link href='https://www.viabcp.com/' target='_blank'>Descubre cómo conseguir el auto</Link>
                 </Button>
             </CardFooter>
         </Card>
