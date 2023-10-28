@@ -1,68 +1,28 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
 import styles from './Sidebar.module.scss'
 import Image from 'next/image'
-import CursosIcon from '../../../public/icons/CursosIcon'
-import dashboardIcon from '../../../public/icons/dashboardIcon.svg'
+import { modules } from '../../utils/modules'
 import Link from 'next/link'
-const Sidebar = () => {
-  const modules = [
-    {
-      name: 'Dashboard',
-      link: '/dashboard',
-      iconSrc: dashboardIcon
-    },
-    {
-      name: 'Cursos',
-      link: '/cursos',
-      iconSrc: dashboardIcon
-    },
-    {
-      name: 'Mis Productos',
-      link: '/productos',
-      iconSrc: dashboardIcon
-    },
-    {
-      name: 'Ver mi futuro',
-      link: '/futuro',
-      iconSrc: dashboardIcon
-    },
-    {
-      name: 'Recomedaciones para ti',
-      link: '/futuro',
-      iconSrc: dashboardIcon
-    },
-    {
-      name: 'Beneficios para ti',
-      link: '/futuro',
-      iconSrc: dashboardIcon
-    },
-    {
-      name: 'Calculadora',
-      link: '/futuro',
-      iconSrc: dashboardIcon
-    },
-    {
-      name: 'Cerrar Sesión',
-      link: '/futuro',
-      iconSrc: dashboardIcon
-    }
-  ]
-
+const Sidebar = ({ isOpen = false }) => {
   const getModules = () => {
     return modules.map((module) => {
       return (
-        <div className={styles.sidebar_tab} key={module.name}>
-          <Image alt='icon' src={module.iconSrc}></Image>
-          <Link href={module.link} className={styles.sidebar_tab_name}>
-            {module.name}
-          </Link>
-        </div>
+        <Link
+          href={module.link}
+          className={styles.sidebar_tab}
+          key={module.name}
+        >
+          <Image alt='icon' src={module?.iconSrc}></Image>
+          <p className={styles.sidebar_tab_name}>{module.name}</p>
+        </Link>
       )
     })
   }
+
   return (
-    <div className={styles.sidebar}>
-      <h1>Educate jugando</h1>
+    <div className={`${styles.sidebar} ${isOpen ? styles.sidebar_open : ''}`}>
+      <h1 className={styles.sidebar_title}>Educate jugando</h1>
       {getModules()}
     </div>
   )
