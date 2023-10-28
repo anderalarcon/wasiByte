@@ -1,0 +1,110 @@
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    &_left {
+        display: none;
+    }
+
+    &_right {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        &_navbar {
+            padding: 16px;
+            background-color: var(--primary-700);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &_countdown {
+                color: var(--white);
+                display: flex;
+                align-items: center;
+                gap: 4px;
+                font-size: 14px;
+
+                &_upTablet {
+                    display: none;
+
+                    &_bold {
+                        font-weight: 700;
+                        display: none;
+                    }
+                }
+
+                &_special {
+                    font-size: 20px;
+                }
+
+            }
+        }
+
+        &_goback {
+            padding: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &_text {
+                display: flex;
+                gap: 5px;
+                align-items: center;
+                color: var(--secondary-500);
+            }
+        }
+
+    }
+
+    @media screen and (min-width: 578px) {
+
+        &_right {
+            &_navbar {
+
+                &_countdown {
+
+
+                    &_upTablet {
+                        display: block;
+
+                        &_bold {
+                            display: block;
+                        }
+                    }
+
+
+
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 992px) {
+        flex-direction: row;
+
+        &_left {
+            display: block;
+            width: 40%;
+            background-image: url('../../../public/images/bydefault.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            height: 100vh;
+            position: relative;
+            flex: 0 0 33.33333333%;
+            & img {
+                width: 100%;
+                // height: 100%;
+                position: absolute;
+                top: 30%;
+            }
+
+        }
+
+        &_right {
+            width: 100%;
+        }
+    }
+}
