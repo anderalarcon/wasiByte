@@ -3,7 +3,6 @@ import React, { useState } from 'react'
 import styles from '../salud/healthPage.module.scss'
 import NavBar from '@/components/NavBar/NavBar'
 import Sidebar from '@/components/Sidebar/Sidebar'
-import Dashboard from '@/components/Dashboard/Dashboard'
 import Productos from '@/components/Productos/Productos'
 
 const ProductsPage = () => {
