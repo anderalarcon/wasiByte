@@ -40,7 +40,7 @@ const CardProduct = (props: { product: IProduct }) => {
 
               <div className={style.container_card_content_service}>
                 <p>Descubre aqui -{'>'} </p>
-                <Button href='' text='Obtenla aquí' />
+                <Button href='/games' text='Obtenla aquí' />
               </div>
             </div>
           </section>

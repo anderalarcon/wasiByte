@@ -12,7 +12,7 @@ export const modules = [
       iconSrc: dashboardIcon
     },
     {
-      name: 'Mis Productos',
+      name: 'Productos',
       link: '/productos',
       iconSrc: productsIcon
     },
