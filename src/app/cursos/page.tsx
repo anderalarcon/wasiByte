@@ -1,12 +1,11 @@
-"use client"
-
 'use client'
+import Dashboard from '@/components/Dashboard/Dashboard'
+import NavBar from '@/components/NavBar/NavBar'
 import Sidebar from '@/components/Sidebar/Sidebar'
 import React, { useState } from 'react'
-import styles from './dashboardPage.module.scss'
-import NavBar from '@/components/NavBar/NavBar'
-import Dashboard from '@/components/Dashboard/Dashboard'
-const DashboardPage = () => {
+import styles from '../salud/healthPage.module.scss'
+
+const CoursesPage = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
@@ -20,4 +19,4 @@ const DashboardPage = () => {
   )
 }
 
-export default DashboardPage
+export default CoursesPage

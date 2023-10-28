@@ -7,8 +7,8 @@ import closeIcon from '../../public/icons/closeIcon.svg'
 
 export const modules = [
     {
-      name: 'Dashboard',
-      link: '/dashboard',
+      name: 'Salud Financiera',
+      link: '/salud',
       iconSrc: dashboardIcon
     },
     {
