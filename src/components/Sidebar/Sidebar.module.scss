@@ -1,0 +1,21 @@
+.sidebar {
+    background-color: var(--primary-500);
+    color: var(--white);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    &_tab {
+        display: flex;
+        gap: 12px;
+        background-color: #03318C;
+        padding: 8px 12px;
+        align-items: center;
+        border-radius: 6px;
+
+        &_name {
+            color: var(--white);
+            text-decoration: none;
+        }
+    }
+}
