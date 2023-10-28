@@ -1,0 +1,28 @@
+.container{
+    overflow-x:auto;
+    scrollbar-width: none;
+    padding: 2.5rem 0px;
+    display: flex;
+    justify-content: center;
+    &_card{
+        width: 350px;
+        overflow: hidden;
+        background-color: var(--card-bg);;
+        border-radius: 8px; /* Ajusta el valor de border-radius según tus preferencias */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        &_image{
+            width: 100%;
+        }
+        &_title{
+            font-weight: bold;
+            font-size: 17px;
+            color:var(--primary-700)
+        }
+        &_text{
+            padding: 1rem 0px;
+            font-size: 12px;
+            color:var(--card-text)
+        }
+    }
+  
+}
