@@ -16,14 +16,30 @@ const features = [
 
 const ShortTermFirstFlow = () => {
     return (
-        <>
+        <div
+            className={`
+                w-full
+                h-1/4
+                md:h-full
+                rounded-2xl
+                p-10
+                bg-[#FF7800]
+                flex
+                flex-col
+                items-center
+                justify-center
+                md:space-y-4
+                shadow-md
+                `
+            }
+        >
             <p className='text-white font-bold md:text-2xl'>
                 Tu deseo es un{' '}
                 <span className='text-[#0030B3]'>vehículo</span>
             </p>
             <p className='text-white text-xl font-bold'>El cuy mágico te recomienda:</p>
             <CardFeatures />
-        </>
+        </div>
     )
 }
 

@@ -1,4 +1,5 @@
 export type StagesProps = {
     onSubmit: () => void,
-    onFlowTriggerSubmit?: (flow: string) => void
+    onFlowTriggerSubmit?: (flow: string) => void,
+    loading: boolean
 }

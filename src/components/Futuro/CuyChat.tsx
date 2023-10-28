@@ -7,6 +7,8 @@ import { StagesProps } from './Stages/types'
 import ChatSecondStage from './Stages/ChatSecondStage'
 import { Loader2 } from 'lucide-react'
 import ShortTermFirstFlow from './Stages/ShortTermFlow/ShortTermFirstFlow'
+import LongTermFirstFlow from './Stages/LongTermFlow/LongTermFirstFlow'
+import LongTermSecondFlow from './Stages/LongTermFlow/LongTermSecondFlow'
 
 const stages = [
   ChatFirstStage,
@@ -18,7 +20,8 @@ const firstFlow = [
 ]
 
 const secondFlow = [
-  ShortTermFirstFlow
+  LongTermFirstFlow,
+  LongTermSecondFlow
 ]
 
 const CuyChat = () => {
@@ -33,20 +36,25 @@ const CuyChat = () => {
     const nextStageIndex = currentStageIndex + 1;
     setLoading(true);
     setTimeout(() => setLoading(false), 1000)
-    if (flow === "FIRST") {
-      if (nextStageIndex <= firstFlow.length - 1) setCurrentStageIndex(currentStageIndex + 1)
-    } else if (flow === "SECOND") {
-      if (nextStageIndex <= secondFlow.length - 1) setCurrentStageIndex(currentStageIndex + 1)
-    } else {
-      if (nextStageIndex <= stages.length - 1) setCurrentStageIndex(currentStageIndex + 1)
-    }
+    setTimeout(() => {
+      if (flow === "FIRST") {
+        if (nextStageIndex <= firstFlow.length - 1) setCurrentStageIndex(currentStageIndex + 1)
+      } else if (flow === "SECOND") {
+        if (nextStageIndex <= secondFlow.length - 1) setCurrentStageIndex(currentStageIndex + 1)
+      } else {
+        if (nextStageIndex <= stages.length - 1) setCurrentStageIndex(currentStageIndex + 1)
+      }
+      setLoading(false)
+    }, 1000)
   }
 
   const onFlowTriggerSubmit = (flow: string) => {
-    setFlow(flow)
     setLoading(true);
-    setTimeout(() => setLoading(false), 1000)
-    setCurrentStageIndex(0)
+    setTimeout(() => {
+      setFlow(flow)
+      setCurrentStageIndex(0)
+      setLoading(false)
+    }, 1000)
   }
 
   return (
@@ -60,29 +68,11 @@ const CuyChat = () => {
           height={600}
         />
       </div>
-      <div
-        className={`
-          w-full
-          h-1/4
-          md:h-full
-          rounded-2xl
-          p-10
-          bg-[#FF7800]
-          flex
-          flex-col
-          items-center
-          justify-center
-          md:space-y-4
-        `
-        }
-      >
-        {
-          loading ?
-            <Loader2 className="h-4 w-4 animate-spin text-white text-xl" />
-            :
-            <CurrentStage onSubmit={onStageSubmit} onFlowTriggerSubmit={onFlowTriggerSubmit} />
-        }
-      </div>
+      <CurrentStage
+        onSubmit={onStageSubmit}
+        onFlowTriggerSubmit={onFlowTriggerSubmit}
+        loading={loading}
+      />
     </div>
   )
 }
