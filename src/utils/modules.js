@@ -22,20 +22,10 @@ export const modules = [
       iconSrc: futureIcon
     },
     {
-      name: 'Recomedaciones para ti',
-      link: '/recomendaciones',
-      iconSrc: recommendsIcon
-    },
-    {
       name: 'Jugando con el cuy',
       link: '/games',
       iconSrc: dashboardIcon
     },
-    // {
-    //   name: 'Calculadora',
-    //   link: '/calculadora',
-    //   iconSrc: dashboardIcon
-    // },
     {
       name: 'Cerrar Sesión',
       link: '/cerrar-sesion',
