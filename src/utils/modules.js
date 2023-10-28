@@ -28,7 +28,7 @@ export const modules = [
     },
     {
       name: 'Cerrar Sesión',
-      link: '/cerrar-sesion',
+      link: '/',
       iconSrc: closeIcon
     }
   ]

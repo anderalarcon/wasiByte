@@ -1,4 +1,13 @@
 .cuychat {
     justify-content: space-between;
     gap: 20px;
+
+    @media screen and (min-width: 768px) {
+        overflow-y: scroll;
+        height: 500px;
+    }
+
+    @media screen and (min-width: 992px) {
+        height: 615px;
+    }
 }
