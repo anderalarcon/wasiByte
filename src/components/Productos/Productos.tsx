@@ -2,11 +2,12 @@ import React, { useState } from 'react'
 import 'tailwindcss/tailwind.css';
 import CardProduct from './childrens/CardProduct/CardProduct';
 import style from './Productos.module.scss';
+
 export interface IProduct {
     description: string;
     title: string;
     url: string;
-    type: string;
+    type: 'seguros' | 'tarjetas' | 'cuentas';
 }
 interface BotonesSombreadosState {
     boton1: boolean;
@@ -16,20 +17,20 @@ interface BotonesSombreadosState {
 }
 const mock: IProduct[] = [
     {
-        title: 'Presupuesto y ahorro',
-        description: 'lorem ipsum dolor sit amet, consectetur',
+        title: 'Visa Platimun LATAM Pass',
+        description: 'Te recomendamos la Visa Platinum LATAM Pass debido al uso reciente y beneficioso de millas en tus viajes. Descubre por qué es la mejor opción para ti.',
         url: 'card',
         type: 'tarjetas',
     },
     {
-        title: 'Cuenta premium',
-        description: 'lorem ipsum dolor sit amet, consectetur',
+        title: 'Cuenta Premio',
+        description: 'Te recomendamos la Cuenta Premio por tu saldo alto en ahorros. Descubre por qué es la mejor de todas las opciones.',
         url: 'card',
         type: 'cuentas',
     },
     {
         title: 'Seguro de viaje',
-        description: 'lorem ipsum dolor sit amet, consectetur',
+        description: 'Te recomendamos el Seguro de Viajes debido al uso reciente y beneficioso de millas en tus viajes. Descubre por qué es la mejor opción para ti.',
         url: 'gift',
         type: 'seguros',
     },
@@ -48,7 +49,7 @@ const Productos = () => {
         boton4: false,
     });
     const toggleSombreado = (nombre: keyof BotonesSombreadosState) => {
-        let selectBoton= {} as BotonesSombreadosState;
+        let selectBoton = {} as BotonesSombreadosState;
         setBotonesSombreados((prevState) => {
             const data = {
                 ...reset,
@@ -58,18 +59,18 @@ const Productos = () => {
             return data;
         });
 
-        setlistProducts((prevlistProduct)=>{
-            if(selectBoton.boton2) return mock.filter((product)=>product.type =='cuentas')
-            if(selectBoton.boton3) return mock.filter((product)=>product.type =='tarjetas')
-            if(selectBoton.boton4) return mock.filter((product)=>product.type =='seguros')
+        setlistProducts((prevlistProduct) => {
+            if (selectBoton.boton2) return mock.filter((product) => product.type == 'cuentas')
+            if (selectBoton.boton3) return mock.filter((product) => product.type == 'tarjetas')
+            if (selectBoton.boton4) return mock.filter((product) => product.type == 'seguros')
             return [...mock]
         })
     };
 
-  
+
 
     const [listProducts, setlistProducts] = useState(mock);
-    
+
     const elementos = listProducts.map((product, index) => (
         <CardProduct key={index} product={product}></CardProduct>
     ));
@@ -108,6 +109,7 @@ const Productos = () => {
                 {elementos}
 
                 {/* <CardProduct ></CardProduct> */}
+               
 
 
             </div>
