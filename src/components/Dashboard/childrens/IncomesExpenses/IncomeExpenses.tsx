@@ -10,12 +10,12 @@ const IncomeExpenses = () => {
         <IncomeExpenseCard
           title={'Ingresos'}
           month={'Octubre'}
-          amount={10000}
+          amount={3100}
         />
         <IncomeExpenseCard
           title={'Gastos'}
           month={'Octubre'}
-          amount={1000}
+          amount={3800}
         />
       </div>
       <RecommendCard />

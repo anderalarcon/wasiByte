@@ -64,21 +64,21 @@ const options = {
     },
 };
 
-const labels = ['Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Setiembre', 'Octubre'];
+const labels = ['Julio', 'Agosto', 'Setiembre', 'Octubre'];
 
 export const data: ChartData<"bar", number[], string> = {
     labels,
     datasets: [
         {
             label: 'Gastos',
-            data: labels.map(() => Math.random() * 5000),
+            data: [3200, 4000, 3500, 3800],
             backgroundColor: '#BB002A',
             barThickness: 16,
             borderRadius: 5,
         },
         {
             label: 'Ingresos',
-            data: labels.map(() => Math.random() * 5000),
+            data: [3000, 3500, 2800, 3100],
             backgroundColor: '#21FB4B',
             barThickness: 16,
             borderRadius: 5
