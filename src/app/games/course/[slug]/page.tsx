@@ -57,7 +57,7 @@ const DetailPage = ({ params } : DetailPageProps) => {
         </div>
         <div className={styles.detailPage_bot}>{getCoursesModules()}</div>
         <div className={styles.detailPage_buttons}>
-          <Button href='' text='Empezar el curso' />
+          <Button href='/tbd' text='Empezar el curso' />
           <Button href={`/games/course/${params?.slug}/quiz/${params?.slug}`} text='Hacer quiz' />
         </div>
       </div>

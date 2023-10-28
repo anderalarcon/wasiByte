@@ -12,7 +12,7 @@ const RecommendCard = () => {
       </div>
       <div className={styles.recommendCard_bot}>
         <p>Aprende con el ABC del BCP</p>
-        <Link className={styles.recommendCard_bot_link} href={'/'} >Cursos</Link>
+        <Link className={styles.recommendCard_bot_link} href={'/games'} >Cursos</Link>
       </div>
     </div>
   )
