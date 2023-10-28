@@ -11,7 +11,7 @@ const LoginForm = () => {
       <Input type='checkbox' />
       <Input tooltipText='Clave de internet de 6 dígitos' />
       <Input placeholder='Código' type='captcha' tooltipText='Clave de internet de 6 dígitos' />
-      <Link className={styles.form_btn} href={'dashboard'}>Continuar</Link>
+      <Link className={styles.form_btn} href={'salud'}>Continuar</Link>
     </form>
   )
 }

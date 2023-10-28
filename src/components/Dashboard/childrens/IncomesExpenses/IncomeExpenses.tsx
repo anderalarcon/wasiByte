@@ -1,11 +1,24 @@
 import React from 'react'
-
+import RecommendCard from '../RecommendCard/RecommendCard'
+import styles from './IncomesExpenses.module.scss'
+import IncomeExpenseCard from '../IncomeExpenseCard/IncomeExpenseCard'
 const IncomeExpenses = () => {
   return (
-    <div>
-        <h2>Ingresos y Gastos</h2>
-        <div></div>
-        <div></div>
+    <div className={styles.incomesexpenses}>
+      <h2 className={styles.incomesexpenses_title}>Ingresos y Gastos</h2>
+      <div className={styles.incomesexpenses_cards}>
+        <IncomeExpenseCard
+          title={'Ingresos'}
+          month={'Octubre'}
+          amount={10000}
+        />
+        <IncomeExpenseCard
+          title={'Gastos'}
+          month={'Octubre'}
+          amount={1000}
+        />
+      </div>
+      <RecommendCard />
     </div>
   )
 }

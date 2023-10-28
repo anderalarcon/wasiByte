@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './Input.module.scss'
 import Image from 'next/image'
-import captchImg from '../../../../public/images/captcha.jpeg'
+import captchImg from '../../../../../../public/images/captcha.jpeg'
 const Input = ({ tooltipText = '', type = 'default', placeholder = '' }) => {
   if (type === 'default') {
     return (
