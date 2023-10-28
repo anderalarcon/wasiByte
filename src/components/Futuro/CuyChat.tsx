@@ -66,8 +66,8 @@ const CuyChat = () => {
           className='h-full rounded-3xl'
           src='/images/cuy-oraculo.png'
           alt='Cuy magico oraculo'
-          width={500}
-          height={600}
+          width={600}
+          height={500}
         />
       </div>
       <CurrentStage
