@@ -7,4 +7,17 @@
         flex-direction: column;
         gap: 20px;
     }
+
+    @media screen and (min-width: 768px) {
+        &_top {
+            overflow-y: scroll;
+            height: 505px;
+        }
+    }
+
+    @media screen and (min-width: 992px) {
+        &_top {
+            height: 615px;
+        }
+    }
 }

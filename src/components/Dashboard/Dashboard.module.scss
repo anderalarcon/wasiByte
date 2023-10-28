@@ -3,6 +3,12 @@
     flex-direction: column;
     width: 100%;
     gap: 30px;
+
+    &_ctn {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
     &_top, &_bot {
         display: flex;
         flex-direction: column;
@@ -34,7 +40,17 @@
             flex-direction: row;
             gap: 50px;
         }
+
+        &_ctn {
+            overflow-y: scroll;
+            height: 478px;
+        }
     }
 
-    @media screen and (min-width: 992px) {}
+    @media screen and (min-width: 992px) {
+        &_ctn {
+            overflow-y: scroll;
+            height: 580px;
+        }
+    }
 }
