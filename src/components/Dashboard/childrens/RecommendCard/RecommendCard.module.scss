@@ -12,6 +12,8 @@
     &_bot {
         display: flex;
         gap: 10px;
+        align-items: center;
+        justify-content: space-between;
     }
 
     &_top {
@@ -35,6 +37,7 @@
             width: 100px;
             justify-content: center;
             font-weight: 700;
+            padding: 10px 30px;
         }
     }
 }

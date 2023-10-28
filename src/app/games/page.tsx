@@ -4,7 +4,7 @@ import NavBar from '@/components/NavBar/NavBar'
 import Sidebar from '@/components/Sidebar/Sidebar'
 import React, { useState } from 'react'
 import styles from '../salud/healthPage.module.scss'
-const BenefitsPage = () => {
+const GamesPage = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
@@ -18,4 +18,4 @@ const BenefitsPage = () => {
   )
 }
 
-export default BenefitsPage
+export default GamesPage
