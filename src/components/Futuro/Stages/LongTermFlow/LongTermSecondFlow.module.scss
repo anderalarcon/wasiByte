@@ -1,0 +1,10 @@
+.secondflow {
+    @media screen and (min-width: 768px) {
+        overflow-y: scroll;
+        height: 525px !important;
+    }
+
+    @media screen and (min-width: 992px) {
+        height: 615px;
+    }
+}

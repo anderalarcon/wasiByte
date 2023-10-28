@@ -3,12 +3,11 @@ import FuturePlanChart from '../../FuturePlanChart'
 import { Card } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import Image from 'next/image'
-import Link from 'next/link'
 import { Checkbox } from '@/components/ui/checkbox'
-
+import styles from './LongTermSecondFlow.module.scss'
 const LongTermSecondFlow = () => {
     return (
-        <div className='p-5 bg-[#EBF4FF] h-full rounded-xl w-full flex flex-col space-y-2'>
+        <div className={`p-5 bg-[#EBF4FF] h-full rounded-xl w-full flex flex-col space-y-2 ${styles.secondflow}`}>
             <div className='flex flex-col md:flex-row-reverse items-center space-y-5 md:space-y-0 space-x-5'>
                 <div className='flex flex-col items-center space-y-4 md:w-3/4 md:px-4'>
                     <Card className='w-full'>
