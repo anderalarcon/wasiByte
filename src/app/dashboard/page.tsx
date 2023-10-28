@@ -1,6 +1,6 @@
 
+'use client'
 import Sidebar from '@/components/Sidebar/Sidebar'
-
 import React, { useState } from 'react'
 import styles from './dashboardPage.module.scss'
 import NavBar from '@/components/NavBar/NavBar'
