@@ -4,6 +4,7 @@ import NavBar from '@/components/NavBar/NavBar'
 import Sidebar from '@/components/Sidebar/Sidebar'
 import React, { useState } from 'react'
 import styles from '../salud/healthPage.module.scss'
+import Games from '@/components/Games/Games'
 const GamesPage = () => {
   const [isOpen, setIsOpen] = useState(false)
 
@@ -12,7 +13,7 @@ const GamesPage = () => {
       <NavBar setIsOpen={setIsOpen} isOpen={isOpen} />
       <div className={styles.dashboardPage_right}>
         <Sidebar isOpen={isOpen} />
-        <Dashboard />
+        <Games/>
       </div>
     </div>
   )

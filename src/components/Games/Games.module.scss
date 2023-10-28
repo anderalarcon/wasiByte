@@ -1,0 +1,10 @@
+.games {
+    width: 100%;
+
+    &_top {
+        padding: 0 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}

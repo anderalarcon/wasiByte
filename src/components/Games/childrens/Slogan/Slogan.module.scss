@@ -1,0 +1,98 @@
+.slogan {
+    background-color: var(--primary-500);
+    padding: 16px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: var(--white);
+    padding: 16px;
+
+    &_top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+
+        & p {
+            font-weight: 500;
+        }
+        & img {
+            width: 100%;
+            max-width: 200px;
+        }
+
+        &_progress {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            &_top {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            &_mid {
+                &_bar {
+                    width: 100%;
+                    background-color: var(--white);
+                    height: 45px;
+                    border-radius: 10px;
+
+                    &_inside {
+                        width: 50%;
+                        height: 45px;
+                        background-color: var(--secondary-600);
+                        border-radius: 10px;
+
+                    }
+                }
+            }
+
+            &_bot {
+                text-decoration: underline;
+                font-weight: 700;
+            }
+        }
+    }
+
+    &_bot {
+        display: flex;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+
+        &_title {
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        &_desc {}
+
+        &_nivels {
+            font-weight: 700;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        flex-flow: row-reverse;
+        &_top {
+            width: 100%;
+            flex-flow: row-reverse;
+        }
+
+        &_bot {
+            &_nivels {
+                justify-content: start;
+            }
+            width: 50%;
+        }
+    }
+
+    @media screen and (min-width: 992px) {}
+}
