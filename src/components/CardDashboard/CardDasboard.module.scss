@@ -1,0 +1,50 @@
+.container{
+    overflow-x:auto;
+    scrollbar-width: none;
+    padding: 1.2rem;
+    display: flex;
+    justify-content: center;
+    
+    &_card{
+        width: 350px;
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+        padding:20px 0px;
+        margin:2px;
+        align-items: center;
+        background-color: #EBF4FF;
+        border-radius: 18px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 5px;
+        section{
+            padding:20px 0px;
+        }
+        &_image{
+            border-radius: 80%;
+            width: 30%;
+            margin-right: 10px;
+        }
+        &_title{
+            font-weight: bold;
+            font-size: 20px;
+            color:#000000;
+        }
+        &_text{
+            padding: 1rem 0px;
+            font-size: 12px;
+            color:var(--card-text)
+        }
+        &_footer{
+            display: flex;
+            justify-content: center;
+        }
+        &_button{
+            padding: 10px 30px;
+            border-radius: 20px;
+            background-color: #FF7800;
+            color:#F2F4F7;
+        }
+    }
+  
+}
