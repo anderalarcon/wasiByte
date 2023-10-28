@@ -1,8 +1,37 @@
 .dashboard {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    &_top, &_bot {
+        display: flex;
+        flex-direction: column;
+    }
 
-    @media screen and (min-width: 768px) {}
+    &_top {
+        & div {
+            width: 100%;
+        }
+    }
+
+    
+    &_bot {
+        & div {
+            width: 100%;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+
+        &_top {
+            flex-direction: row;
+            gap: 50px;
+        }
+
+        &_bot {
+            flex-direction: row;
+            gap: 50px;
+        }
+    }
 
     @media screen and (min-width: 992px) {}
 }
