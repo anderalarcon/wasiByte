@@ -1,0 +1,14 @@
+.dashboardPage {
+    position: relative;
+
+    &_right {
+        display: flex;
+        flex-direction: row;
+    }
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+    }
+
+    @media screen and (min-width: 992px) {}
+}
