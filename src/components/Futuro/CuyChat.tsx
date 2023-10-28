@@ -3,13 +3,11 @@
 import Image from 'next/image'
 import ChatFirstStage from './Stages/ChatFirstStage'
 import { useState } from 'react'
-import { StagesProps } from './Stages/types'
 import ChatSecondStage from './Stages/ChatSecondStage'
-import { Loader2 } from 'lucide-react'
 import ShortTermFirstFlow from './Stages/ShortTermFlow/ShortTermFirstFlow'
 import LongTermFirstFlow from './Stages/LongTermFlow/LongTermFirstFlow'
 import LongTermSecondFlow from './Stages/LongTermFlow/LongTermSecondFlow'
-
+import styles from './CuyChat.module.scss'
 const stages = [
   ChatFirstStage,
   ChatSecondStage
@@ -58,7 +56,7 @@ const CuyChat = () => {
   }
 
   return (
-    <div className='p-5 bg-[#EBF4FF] h-full rounded-xl w-full flex flex-col md:flex-row items-center space-y-5 md:space-y-0 space-x-5'>
+    <div className={`p-5 bg-[#EBF4FF] h-full rounded-xl w-full flex flex-col md:flex-row items-center space-y-5 md:space-y-0 space-x-5 ${styles.cuychat}`}>
       <div className='h-3/4 aspect-[3/4] md:h-full rounded-3xl'>
         <Image
           className='h-full rounded-3xl'
