@@ -3,17 +3,22 @@ import Dashboard from '@/components/Dashboard/Dashboard'
 import NavBar from '@/components/NavBar/NavBar'
 import Sidebar from '@/components/Sidebar/Sidebar'
 import React, { useState } from 'react'
-import styles from '../salud/healthPage.module.scss'
+import styles from './future.module.scss'
+import CuyChat from '@/components/Futuro/CuyChat'
+import TopBar from '@/components/TopBar/TopBar'
 
 const FuturePage = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <div className={styles.dashboardPage}>
+    <div className={styles.page}>
       <NavBar setIsOpen={setIsOpen} isOpen={isOpen} />
-      <div className={styles.dashboardPage_right}>
+      <div className={styles.page_right}>
         <Sidebar isOpen={isOpen} />
-        <Dashboard />
+        <div className={styles.main}>
+          <TopBar />
+          <CuyChat />
+        </div>
       </div>
     </div>
   )
