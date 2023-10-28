@@ -1,15 +1,17 @@
 import React from 'react'
 import styles from './Dashboard.module.scss'
+import IncomeExpenseChart from '../IncomeExpenseChart/IncomeExpenseChart'
 const Dashboard = () => {
   return (
     <div className={styles.dashboard}>
+      <div>navbar top</div>
       <div className={styles.dashboard_top}>
-        <p>ingresos y gastos</p>
-        <p>dashboard grafico</p>
+        <div>ingresos y gastos</div>
+        <IncomeExpenseChart />
       </div>
       <div className={styles.dashboard_bot}>
-        <p>cuy</p>
-        <p>otro coso</p>
+        <div>cuy</div>
+        <div>otro coso</div>
       </div>
     </div>
   )
