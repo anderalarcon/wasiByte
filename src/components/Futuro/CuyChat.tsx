@@ -29,9 +29,6 @@ const CuyChat = () => {
   const [loading, setLoading] = useState(false);
   const [flow, setFlow] = useState("")
 
-  const CurrentStage = flow === "FIRST" ? firstFlow[currentStageIndex]
-    : flow === "SECOND" ? secondFlow[currentStageIndex] : stages[currentStageIndex];
-
   const onStageSubmit = () => {
     const nextStageIndex = currentStageIndex + 1;
     setLoading(true);
@@ -56,6 +53,11 @@ const CuyChat = () => {
       setLoading(false)
     }, 1000)
   }
+
+  if (flow === "SECOND" && currentStageIndex === 1) return <LongTermSecondFlow />
+
+  const CurrentStage = flow === "FIRST" ? firstFlow[currentStageIndex]
+    : flow === "SECOND" ? secondFlow[currentStageIndex] : stages[currentStageIndex];
 
   return (
     <div className='p-5 bg-[#EBF4FF] h-full rounded-xl w-full flex flex-col md:flex-row items-center space-y-5 md:space-y-0 space-x-5'>
