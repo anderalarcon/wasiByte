@@ -1,0 +1,109 @@
+.container {
+    overflow-x: auto;
+    scrollbar-width: none;
+    width: 100%;
+    margin:10px 0px;
+    // padding: 1rem;
+    display: flex;
+    justify-content: center;
+
+    &_card {
+        display: flex;
+        align-items: center;
+        gap: 2%;
+        padding: 20px 8px;
+        overflow: hidden;
+        background-color: #EBF4FF;
+        border-radius: 8px;
+        /* Ajusta el valor de border-radius según tus preferencias */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+        section {
+            padding: 0px 2px
+        }
+
+        &_image {
+            // width: 30%;
+            max-width: 40%;
+            max-height: 40%;
+        }
+
+        &_title {
+            font-weight: bold;
+            text-align: center;
+            font-size: 17px;
+            color: var(--primary-700)
+        }
+
+        &_content {
+            display: flex;
+            flex-direction: column;
+
+            &_service {
+                padding: 12px 0px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                p {
+                    color: #FF7800;
+                    font-size: 14px;
+                    // align-items: space-between;
+                }
+
+                button {
+
+                    font-size: 14px;
+                    padding: 10px 20px;
+                    border-radius: 20px;
+                    background-color: #FF7800;
+                    margin: 10px;
+                    color: #F2F4F7;
+                }
+
+            }
+
+            @media screen and (min-width: 935px) {
+                &_service {
+                    width: 200px;
+                    padding: 12px 0px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+            }
+
+        }
+
+
+        @media screen and (min-width: 935px) {
+            &_content {
+                flex-direction: row;
+                gap: 12px;
+            }
+
+            &_text {
+                // padding: 1rem 1rem 0px 0px;
+                font-size: 12px;
+                // max-width: 350px;
+            }
+            &_title {
+                text-align: start;
+            }
+        }
+
+        @media screen and (min-width: 992px) {}
+
+        &_text {
+            padding: 1rem 0px;
+            font-size: 12px;
+            text-align: justify;
+            // max-width: 280px;
+            color: var(--card-text)
+        }
+
+    }
+
+
+
+}
