@@ -2,7 +2,23 @@
     display: flex;
     flex-direction: column;
 
-    @media screen and (min-width: 768px) {}
+    &_top, &_bot {
+        display: flex;
+        flex-direction: column;
+    }
+
+    @media screen and (min-width: 768px) {
+
+        &_top {
+            flex-direction: row;
+            gap: 50px;
+        }
+
+        &_bot {
+            flex-direction: row;
+            gap: 50px;
+        }
+    }
 
     @media screen and (min-width: 992px) {}
 }
