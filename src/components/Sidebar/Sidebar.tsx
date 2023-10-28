@@ -3,7 +3,8 @@ import React, { useState } from 'react'
 import styles from './Sidebar.module.scss'
 import Image from 'next/image'
 import { modules } from '../../utils/modules'
-import Link from 'next/link'
+import Link from 'next/link';
+import headerLogo from '../../../public/images/header-logo.png'
 const Sidebar = ({ isOpen = false }) => {
   const getModules = () => {
     return modules.map((module) => {
@@ -22,7 +23,9 @@ const Sidebar = ({ isOpen = false }) => {
 
   return (
     <div className={`${styles.sidebar} ${isOpen ? styles.sidebar_open : ''}`}>
-      <h1 className={styles.sidebar_title}>Educate jugando</h1>
+          <Image alt='icon' src={headerLogo.src} width={100} height={100} className={styles.sidebar_header}></Image>
+
+      {/* <h1 className={styles.sidebar_title}>Educate jugando</h1> */}
       {getModules()}
     </div>
   )
