@@ -1,8 +1,26 @@
 import React from 'react'
 import styles from './QuizSlogan.module.scss'
 import Image from 'next/image'
-const QuizSlogan = ({
-  currentQuestion = {},
+type Question = {
+  question: string
+  image: string
+  options?: string[]
+  answer?: string
+  feedback?: {
+    correct: string
+    incorrect: string
+  }
+}
+
+type QuizSloganProps = {
+  currentQuestion: number;
+  questions: Question[];
+  quizCompleted?: boolean;  
+  score?: number;           
+};
+
+const QuizSlogan: React.FC<QuizSloganProps>  = ({
+  currentQuestion,
   questions = [],
   quizCompleted = false,
   score = 0
@@ -17,7 +35,7 @@ const QuizSlogan = ({
           </p>
         </div>
         <Image
-          src={questions[currentQuestion].image}
+          src={questions[currentQuestion]?.image}
           width={200}
           height={200}
           alt='quiz image'

@@ -9,13 +9,19 @@ import Image from 'next/image'
 import { quizzQuestions } from '../../../../../../utils/quizzQuestions'
 import QuizModal from '@/components/Games/childrens/QuizModal/QuizModal'
 
+type UserAnswer = {
+  question: string;
+  userAnswer: string;
+  correctAnswer: string;
+};
+
 const QuizPage = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [selectedOption, setSelectedOption] = useState('')
   const [score, setScore] = useState(0)
   const [showScore, setShowScore] = useState(false)
-  const [feedbackMessage, setFeedbackMessage] = useState(null)
-  const [userAnswers, setUserAnswers] = useState([])
+  const [feedbackMessage, setFeedbackMessage] = useState<string | null>(null);
+  const [userAnswers, setUserAnswers] = useState<UserAnswer[]>([]);
   const [showContinueButton, setShowContinueButton] = useState(true)
 
   const handleOptionChange = (e: any) => {
@@ -77,8 +83,8 @@ const QuizPage = () => {
     }
 
     if (showScore) {
-      const getIconResult = (answer: string) => {
-        if (answer.userAnswer === answer.correctAnswer) {
+      const getIconResult = (answer: any) => {
+        if (answer?.userAnswer === answer?.correctAnswer) {
           return <Image alt='check' src={check.src} width={50} height={20} />
         } else {
           return <Image alt='check' src={x.src} width={50} height={20} />

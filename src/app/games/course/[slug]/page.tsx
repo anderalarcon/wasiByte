@@ -4,7 +4,13 @@ import Image from 'next/image'
 import detailsPageDefault from '../../../../../public/images/detailsPageDefault.png'
 import { coursesModules } from '../../../../utils/coursesModules'
 import Button from '@/components/Button/Button'
-const DetailPage = ({ params = {} }) => {
+type DetailPageProps = {
+  params?: {
+    slug: string;
+  };
+}
+
+const DetailPage = ({ params } : DetailPageProps) => {
   const getCoursesModules = () => {
     return coursesModules.map((courseModule, i) => {
       return (
@@ -52,7 +58,7 @@ const DetailPage = ({ params = {} }) => {
         <div className={styles.detailPage_bot}>{getCoursesModules()}</div>
         <div className={styles.detailPage_buttons}>
           <Button href='' text='Empezar el curso' />
-          <Button href={`/games/course/${params.slug}/quiz/${params.slug}`} text='Hacer quiz' />
+          <Button href={`/games/course/${params?.slug}/quiz/${params?.slug}`} text='Hacer quiz' />
         </div>
       </div>
     </div>

@@ -51,8 +51,6 @@ const LongTermFirstFlow = ({ onSubmit, loading }: StagesProps) => {
       </div>
       <div className={styles.longterm_button} >
         <button
-          text='Planificar mi deseo'
-          href=''
           className=''
           disabled={loading}
           onClick={onSubmit}

@@ -5,8 +5,8 @@ import styles from './NavBar.module.scss'
 interface NavBarProps {
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>
   isOpen: boolean
-  showToggle: boolean
-  showInDesktop: boolean
+  showToggle?: boolean
+  showInDesktop?: boolean
 }
 
 const NavBar = ({
