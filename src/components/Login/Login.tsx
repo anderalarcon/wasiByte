@@ -5,7 +5,7 @@ import logoBcp from '../../../public/icons/logoBcp.svg'
 import styles from './Login.module.scss'
 import leftArrow from '../../../public/images/leftArrow.png'
 import question from '../../../public/images/question.png'
-import clock from '../../../public/icons/clock.svg'
+import clock from '../../../public/icons/clockIcon.svg'
 import useCountdown from '@/hooks/useCountdown'
 import LoginForm from '../LoginForm/LoginForm'
 
